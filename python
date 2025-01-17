@@ -1,0 +1,33 @@
+""" Maria, a class teacher, wants to identify and display the names and marks of students who have passed an exam. The student's marks are compared to a threshold of passing marks. 
+
+
+
+Help Maria write a program to store the students' names and marks, check against the passing marks, and display the details of those who passed.
+
+Input format :
+The first line of input consists of an integer no_of_students, representing the number of students.
+
+The next 2 × no_of_students lines contain:
+
+A string (name) on the first line of each pair, represents the student's name.
+An integer (marks) on the second line of each pair, represents the student's marks.
+The last line of input consists of an integer passing mark, representing the minimum mark required to pass.
+
+Output format :
+For each student who passes, print their details in the format: {Name} passed with {marks} marks.
+
+If no student passes, the output will be empty."""
+
+
+students = {}
+no_of_students = int(input())
+for _ in range(no_of_students):
+    name = input()
+    marks = int(input())
+    students[name] = marks
+minimum_pass_marks = int(input())
+for name, marks in students.items():
+    if marks < minimum_pass_marks:  
+        pass
+    else:
+        print(f"{name} passed with {marks} marks.")
